@@ -36,6 +36,11 @@ set_target_properties(sleigh_sleigh PROPERTIES
   OUTPUT_NAME_DEBUG sleigh_dbg
 )
 
+# Fix a warning/error with the register keyword being deprecated
+if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  target_compile_options(sleigh_sleigh PRIVATE -Wno-register -Wno-deprecated-register)
+endif()
+
 if(NOT CMAKE_SKIP_INSTALL_RULES)
   include("GNUInstallDirs")
 

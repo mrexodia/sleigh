@@ -7,3 +7,4 @@
 #
 
 add_subdirectory(sleigh-lift)
+add_subdirectory(sleigh-emulate)

@@ -19,6 +19,8 @@ if("${sleigh_RELEASE_TYPE}" STREQUAL "HEAD")
   set(sleigh_RELEASE_IS_HEAD TRUE)
 endif()
 
+add_compile_definitions(_ITERATOR_DEBUG_LEVEL=0)
+
 project(sleigh
   VERSION "${ghidra_version}"
   DESCRIPTION "Unofficial CMake build for Ghidra Sleigh"
